@@ -1,6 +1,9 @@
 ## First-Come, First-Served Scheduling (FCFS)
  
 First-come, first-served (FCFS) is the simplest CPU scheduling algorithm, it processes run in the order they arrive. New processes join the back of the ready queue, and the CPU always takes the process at the front. Once a process starts, it keeps the CPU until it finishes or blocks.
+
+**ChatGPT Conversation:** https://chatgpt.com/share/6afc0412-fb04-83e8-acea-f9fdee7bc578
+
  
 ### C Example
  
