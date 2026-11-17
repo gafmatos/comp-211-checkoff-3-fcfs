@@ -1,6 +1,6 @@
 ## First-Come, First-Served Scheduling (FCFS)
  
-First-come, first-served (FCFS) is the simplest CPU scheduling algorithm, it processes run in the order they arrive. New processes join the back of the ready queue, and the CPU always takes the process at the front. Once a process starts, it keeps the CPU until it finishes or blocks.
+First-come, first-served (FCFS) is the simplest CPU scheduling algorithm, processes run in the order they arrive. New processes join the back of the ready queue, and the CPU always takes the process at the front. Once a process starts, it keeps the CPU until it finishes or blocks.
 
 **ChatGPT Conversation:** https://chatgpt.com/share/6afc0412-fb04-83e8-acea-f9fdee7bc578
 
@@ -34,9 +34,9 @@ Average wait: 3.00 ms
  
 Both runs use the same processes (P1 needs 24 ms, P2 and P3 need 3 ms each), only the arrival order changes. When the long process arrives first, the short processes are stuck waiting behind it, and the average wait is about 6× longer. This is called the **convoy effect**, and it is the main weakness of FCFS.
  
-FCFS is simple to implement and fair in the sense that every process eventually runs. However, because performance depends entirely on arrival order, it is a poor fit for interactive systems, where one long job can make everything else feel unresponsive.
+FCFS is simple to implement and fair in the sense that every process eventually runs. However, because performance depends entirely on order, it is a poor fit for interactive systems, where one long job can make everything else feel unresponsive.
  
 This program is a small simulation, assuming all processes arrive at time 0 and only calculates waiting times instead of actually scheduling work on a CPU.
  
-As for application, FCFS shows up wherever jobs are handled in arrival order, such as print queues and batch processing systems. It is also the building block for better schedulers: Round Robin is essentially FCFS with a time limit, which prevents long processes from blocking everyone else. 
+FCFS also serves as a foundation for other scheduling algorightms like Round Robin, which is essentially FCFS with a time limit, which prevents long processes from blocking everyone else. 
  
