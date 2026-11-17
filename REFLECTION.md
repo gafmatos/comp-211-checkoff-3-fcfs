@@ -2,7 +2,7 @@
 
 ## How I Approached Learning the Topic
 
-At the beginning I was relying more on AI, but as I went through I found myself going to YouTube videos, since it is a method I prefer. 
+At first I relied mostly on AI, but later I also used YouTube videos, since I learn better that way. I started by asking what FCFS is, then how my computer actually uses it, and then how it connects to I/O from class. When I didn’t understand a term, like CPU burst, I asked about it separately.
 
 ## Prompts
 
