@@ -2,7 +2,7 @@
 
 typedef struct
 {
-    int id;
+    char name[3];
     int burst;
     int wait;
 } Process;
@@ -16,20 +16,22 @@ void iterateProcess(Process p[], int len)
         p[i].wait = time;
         time += p[i].burst;
         total += p[i].wait;
-        printf("P%d waits %2d ms\n", p[i].id, p[i].wait);
+        printf("%s waits %2d ms\n", p[i].name, p[i].wait);
     }
     double avg = (double)total / len;
 
-    printf("Average wait: %.2f\n", avg);
+    printf("Average wait: %.2f ms \n", avg);
     printf("\n");
 }
 
 int main()
 {
-    Process slower[] = {{1, 24, 0}, {2, 3, 24}, {3, 3, 27}};
-    Process faster[] = {{2, 3, 0}, {3, 3, 0}, {1, 24, 0}};
+    Process slower[] = {{"P1", 24, 0}, {"P2", 3, 24}, {"P3", 3, 27}};
+    Process faster[] = {{"P2", 3, 0}, {"P3", 3, 0}, {"P1", 24, 0}};
+    printf("\n");
     iterateProcess(slower, 3);
     iterateProcess(faster, 3);
+    printf("\n");
 
     return 0;
 }
