@@ -16,7 +16,7 @@ void iterateProcess(Process p[], int len)
         p[i].wait = time;
         time += p[i].burst;
         total += p[i].wait;
-        printf("%s waits %2d ms\n", p[i].name, p[i].wait);
+        printf("%s waits %d ms\n", p[i].name, p[i].wait);
     }
     double avg = (double)total / len;
 
@@ -26,7 +26,7 @@ void iterateProcess(Process p[], int len)
 
 int main()
 {
-    Process slower[] = {{"P1", 24, 0}, {"P2", 3, 24}, {"P3", 3, 27}};
+    Process slower[] = {{"P1", 24, 0}, {"P2", 3, 0}, {"P3", 3, 0}};
     Process faster[] = {{"P2", 3, 0}, {"P3", 3, 0}, {"P1", 24, 0}};
     printf("\n");
     iterateProcess(slower, 3);
